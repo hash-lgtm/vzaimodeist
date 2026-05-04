@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ГКУ СК «КЦИТ» — Краевой центр информационных технологий</title>
+    <meta name="description" content="Официальный портал ГКУ СК «Краевой центр информационных технологий». Новости, государственные услуги, проекты, обратная связь и контактная информация Ставропольского края.">
+    <meta name="keywords" content="ГКУ СК, Краевой центр информационных технологий, КЦИТ, госуслуги Ставрополь, IT консультации, обработка обращений">
+    <meta name="author" content="ГКУ СК «ЦИТ»">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта с адаптивным меню -->
+    <header>
+        <div class="logo">
+            <span class="logo-icon">🏛️</span>
+            <span class="logo-text">ГКУ СК «ЦИТ»</span>
+        </div>
+        
+        <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false">☰</button>
+        
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="#about" class="nav-link">О центре</a></li>
+                <li><a href="#news" class="nav-link">Новости</a></li>
+                <li><a href="#services" class="nav-link">Услуги</a></li>
+                <li><a href="#feedback" class="nav-link">Обратная связь</a></li>
+                <li><a href="#contacts" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Блок "О центре" (Hero-секция) -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <h1>Добро пожаловать в ГКУ СК<br>«Краевой центр информационных технологий»</h1>
+            <p>Центр предоставляет населению Ставропольского края доступ к государственным услугам, проектам и информационным ресурсам.</p>
+            <a href="#services" class="hero-btn">Перейти к услугам →</a>
+        </div>
+    </section>
+
+    <!-- Блок новостей -->
+    <section id="news" class="content-section">
+        <div class="container">
+            <h2>📰 Новости центра</h2>
+            <div class="news-cards">
+                <!-- Новость 1 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://placehold.co/600x400/0b3b5f/white?text=Система+учёта" alt="Обновление системы учёта обращений">
+                    </div>
+                    <div class="news-content">
+                        <h3>Обновление системы учета обращений</h3>
+                        <span class="news-date">📅 03 апреля 2026</span>
+                        <p>Внедрена новая система для обработки обращений граждан, ускоряющая обработку и повышающая качество взаимодействия.</p>
+                        <button class="read-more" data-news="system">Подробнее →</button>
+                    </div>
+                </article>
+                <!-- Новость 2 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://placehold.co/600x400/1a5f7a/white?text=Онлайн+сервис" alt="Новый онлайн-сервис для заявок">
+                    </div>
+                    <div class="news-content">
+                        <h3>Новый онлайн-сервис для заявок</h3>
+                        <span class="news-date">📅 28 марта 2026</span>
+                        <p>Граждане теперь могут подавать заявки на консультации и получать обратную связь через онлайн-сервис.</p>
+                        <button class="read-more" data-news="service">Подробнее →</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок государственных услуг -->
+    <section id="services" class="content-section alt-bg">
+        <div class="container">
+            <h2>📋 Государственные услуги</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Консультации по IT</h3>
+                    <p>Предоставление консультаций по информационным технологиям, помощь в работе с порталом госуслуг, настройка устройств и защита данных.</p>
+                    <span class="service-tag">Бесплатно</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Обработка обращений</h3>
+                    <p>Своевременная обработка всех заявок и обращений граждан, регистрация и перенаправление в профильные ведомства.</p>
+                    <span class="service-tag">24 часа</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок обратной связи -->
+    <section id="feedback" class="content-section">
+        <div class="container">
+            <h2>✉️ Обратная связь</h2>
+            <p class="section-subtitle">Задайте вопрос или оставьте предложение — мы ответим в ближайшее время</p>
+            
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Иванов Иван Иванович">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Электронная почта <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="ivanov@example.ru">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Сообщение <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" placeholder="Введите ваше сообщение (не менее 10 символов)"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">📨 Отправить обращение</button>
+            </form>
+        </div>
+
+
+    </section>
+
+    <!-- Блок контактов -->
+    <section id="contacts" class="content-section alt-bg">
+        <div class="container">
+            <h2>📍 Контактная информация</h2>
+            <div class="contacts-grid">
+                <div class="contact-item">
+                    <span class="contact-icon">🏢</span>
+                    <div>
+                        <strong>Адрес:</strong><br>
+                        г. Ставрополь, ул. Пирогова, 18/6
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <strong>Телефон:</strong><br>
+                        <a href="tel:+78001000768">+7 (800) 100-07-68</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:info@cit-sk.ru">info@cit-sk.ru</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕒</span>
+                    <div>
+                        <strong>Режим работы:</strong><br>
+                        пн–пт: 09:00 – 18:00
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 ГКУ СК «Краевой центр информационных технологий»</p>
+            <p>Все права защищены</p>
+        </div>
+    </footer>
+
+    <!-- Всплывающее уведомление -->
+    <div id="toast-notification" class="toast">Спасибо, ваше обращение принято</div>
+
+    <!-- Модальное окно для полного текста новостей -->
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+(function() {
+    emailjs.init("t6ODMEoS_HjL7Awvn"); // ← вставь ключ
+})();
+
+document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    emailjs.send("service_c45ymzo", "template_n8whb85", {
+        from_name: name,
+        from_email: email,
+        message: message
+        
+    })
+    .then(function() {
+        document.getElementById("toast-notification").classList.add("show");
+    }, function(error) {
+        alert("Ошибка: " + JSON.stringify(error));
+    });
+});
+</script>
+
+    <script src="script.js"></script>
+</body>
+</html>
